@@ -1,0 +1,8 @@
+Subsystem-ManifestVersion: 1
+Subsystem-SymbolicName: org.workspace7.osgi.subsystem.org.workspace7.osgi.subsystem.app2
+Subsystem-Version: 1.0.0.SNAPSHOT
+Subsystem-Name: App2 Subsystem
+Subsystem-Description: App2 Subsystem that has a dependency with another subsystem
+Subsystem-Content: org.workspace7.osgi.subsystem.app1;version="[1.0.0,2.0.0)";start-order:="1",
+ org.workspace7.osgi.subsystem.bundle3;version="[1.0.0,2.0.0)";start-order:="2"
+Subsystem-Type: org.osgi.subsystem.feature

@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.workspace7.osgi.subsystem</groupId>
+		<artifactId>subsystem-demo-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../subsystem-demo</relativePath>
+	</parent>
+
+	<artifactId>org.workspace7.osgi.subsystem.bundle1</artifactId>
+	<packaging>bundle</packaging>
+
+	<name>Subsystem Demo - Bundle1</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<osgi.version>5.0.0</osgi.version>
+		<osgi.annotations.version>6.0.0</osgi.annotations.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.annotation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.workspace7.osgi.subsystem</groupId>
+			<artifactId>org.workspace7.osgi.subsystem.helper.api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Activator>org.workspace7.osgi.subsystem.bundle1.internal.Bundle1Activator</Bundle-Activator>
+						<Import-Package>org.osgi.framework;version="[1.7,2.0.0)",
+							javax.servlet;version="[2.5,4.0.0)",org.workspace7.osgi.subsystem.helper.api;version="[1.0,2.0)",*</Import-Package>
+						<_dsannotations>*</_dsannotations>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

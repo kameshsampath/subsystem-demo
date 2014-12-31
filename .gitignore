@@ -1,0 +1,8 @@
+target
+obr
+local-repo
+.settings
+.classpath
+.project
+generated
+

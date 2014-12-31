@@ -1,0 +1,82 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<!-- Make it to point to your convinient location -->
+	<localRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo-parent/obr</localRepository>
+
+	<pluginGroups>
+		<pluginGroup>org.apache.felix</pluginGroup>
+	</pluginGroups>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Make it to point to your convinient location typically same as localRepository -->
+				<mavenRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo-parent/obr</mavenRepository>
+				<obrRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo-parent/obr</obrRepository>
+			</properties>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>plugin-central</id>
+					<url>http://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+			<repositories>
+				<repository>
+					<id>central</id>
+					<url>http://repo1.maven.org/maven2</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+
+				<repository>
+					<id>codehaus</id>
+					<url>http://repository.codehaus.org</url>
+				</repository>
+				<repository>
+					<id>liferay</id>
+					<url>http://cdn.repository.liferay.com/nexus/content/groups/public</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>jboss</id>
+					<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>jboss-snapshots</id>
+					<url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+</settings>

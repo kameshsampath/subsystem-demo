@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.workspace7.osgi.subsystem</groupId>
+		<artifactId>subsystem-demo-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../subsystem-demo</relativePath>
+	</parent>
+
+	<artifactId>org.workspace7.osgi.subsystem.app2</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>esa</packaging>
+	<name>App2 Subsystem</name>
+	<description>App2 Subsystem, App2 Subsystem that has a dependency with another subsystem</description>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.aries</groupId>
+				<artifactId>esa-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<manifestFile>${basedir}/src/main/resources/OSGI-INF/SUBSYSTEM.MF</manifestFile>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
