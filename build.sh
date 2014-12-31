@@ -1,2 +1,2 @@
 #!/bin/bash
-mvn -s settings.xml clean install
+mvn -s settings.xml $@

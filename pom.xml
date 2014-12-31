@@ -9,7 +9,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<obrRepository>/Users/kameshs/osgi_workspace7/cnf/localrepo/repository.xml</obrRepository>
 		<osgi.version>5.0.0</osgi.version>
 		<osgi.annotations.version>6.0.0</osgi.annotations.version>
 	</properties>
@@ -81,8 +80,6 @@
 		<module>org.workspace7.osgi.subsystem.app1</module>
 		<module>org.workspace7.osgi.subsystem.app2</module>
 		<module>org.workspace7.osgi.subsystem.helper</module>
-		<module>
-			../org.workspace7.osgi.subsystem.helper.consumer
-		</module>
+		<module>org.workspace7.osgi.subsystem.helper.consumer</module>
 	</modules>
 </project>

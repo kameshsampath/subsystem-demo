@@ -4,7 +4,7 @@
                           http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
 	<!-- Make it to point to your convinient location -->
-	<localRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo-parent/obr</localRepository>
+	<localRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo/obr</localRepository>
 
 	<pluginGroups>
 		<pluginGroup>org.apache.felix</pluginGroup>
@@ -18,8 +18,8 @@
 			</activation>
 			<properties>
 				<!-- Make it to point to your convinient location typically same as localRepository -->
-				<mavenRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo-parent/obr</mavenRepository>
-				<obrRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo-parent/obr</obrRepository>
+				<mavenRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo/obr</mavenRepository>
+				<obrRepository>/Users/kameshs/Projects/osgi/workspace7/subsystem-demo/obr</obrRepository>
 			</properties>
 			<pluginRepositories>
 				<pluginRepository>
